@@ -19,7 +19,7 @@ from datetime import datetime, date
 
 # 1 USER INPUT
 
-user_input = input("Enter the tickers separated by commas (available: AAPL, MSFT, AMZN, GOOGL, KO, JNJ, XOM, JPM, TSLA, DIS): ")
+user_input = input("Enter the tickers separated by commas (example: AAPL, MSFT, AMZN, GOOGL, KO, JNJ, XOM, JPM, TSLA, DIS): ")
 tickers = [t.strip().upper() for t in user_input.split(',') if t.strip()]
 while True:
     start_input = input("Enter the start date (YYYY-MM-DD), e.g. 2018-01-01: ").strip()
