@@ -115,7 +115,7 @@ for tr in target_returns:
         frontier_ret.append(tr)
 
 
-# 6 PORTFOGIO MIN-VAR
+# 7 PORTFOGIO MIN-VAR
 
 res_mvp = minimize(lambda w: (w @ cov_matrix @ w)**0.5,
                    x0, method='SLSQP', bounds=bounds,
@@ -123,7 +123,7 @@ res_mvp = minimize(lambda w: (w @ cov_matrix @ w)**0.5,
 w_mvp = res_mvp.x
 std_mvp, ret_mvp = portfolio_perf(w_mvp, mean_returns, cov_matrix)
 
-# 7 OPTIMAL PORTFOLIO (MAX SHARPE RATIO)
+# 8 OPTIMAL PORTFOLIO (MAX SHARPE RATIO)
 
 risk_free = 0.02  # assumed risk-free rate (2%)
 
@@ -166,7 +166,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# 8 Conclusion
+# 9 Conclusion
 print("""
 Conclusions:
 The optimal portfolio was determined using the Markowitz model,
